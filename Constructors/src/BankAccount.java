@@ -6,6 +6,35 @@ public class BankAccount
 	private String _email;
 	private String _phoneNo;
 	
+	/**
+	 * Default constructor
+	 */
+	public BankAccount()
+	{
+//		This idea here is to create default values for the fields when the user calls the constructor.
+//		It can be easily done by calling the custom constructor from within the default constructor.
+		this(666,400,"Default","default address","1000000000");
+		System.out.println("Empty constructor");
+	}
+	
+	/**
+	 * Custom constructor
+	 * 
+	 * @param accountNumber
+	 * @param balance
+	 * @param name
+	 * @param email
+	 * @param phoneNo
+	 */
+	public BankAccount(int accountNumber, double balance, String name, String email, String phoneNo)
+	{
+		this._accountNumber = accountNumber;
+		this._balance = balance;
+		this._name = name;
+		this._email = email;
+		this._phoneNo = phoneNo;
+	}
+	
 	public void setAccountNnumber(int accountNumber)
 	{
 		this._accountNumber = accountNumber;
@@ -36,7 +65,6 @@ public class BankAccount
 		{
 			this._phoneNo = phoneNo;
 		}
-		
 	}
 	
 	public int getAccountNumber()

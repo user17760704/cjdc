@@ -35,6 +35,25 @@ public class BAMain
 		System.out.println("Withdraw the following amount: ");
 		ba.withdraw(input.nextDouble());
 		
+		System.out.println("\n********************");
+		System.out.println("Now calling the constructor");
+		
+		BankAccount ba2 = new BankAccount(9999, 123.45, "patch2", "patch2@patch.com", "1234567890");
+		System.out.println("Account number : " + ba2.getAccountNumber());
+		System.out.println("Balance: " + ba2.getBalance());
+		System.out.println("Name: " + ba2.getName());
+		System.out.println("Email: " + ba2.getEmail());
+		System.out.println("Phone number: " + ba2.getPhoneNo());
+		
+		System.out.println("\n******************\n");
+		BankAccount ba3 = new BankAccount();
+		System.out.println("Account number : " + ba3.getAccountNumber());
+		System.out.println("Balance: " + ba3.getBalance());
+		System.out.println("Name: " + ba3.getName());
+		System.out.println("Email: " + ba3.getEmail());
+		System.out.println("Phone number: " + ba3.getPhoneNo());
+				
+		
 	}
 
 }
