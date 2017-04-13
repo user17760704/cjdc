@@ -41,10 +41,10 @@ public class EvenNumber
 			inputNum[0]++;
 			numCount++;
 			
-			if (numCount == 5)
-			{
-				break;
-			}
+//			if (numCount == 5)
+//			{
+//				break;
+//			}
 		}
 		System.out.println(numCount + " even numbers are found.");
 		
