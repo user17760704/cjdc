@@ -74,6 +74,7 @@ public class BankAccount
 		if (!InputValidation.validPhoneNumber(phoneNo))
 		{
 			System.out.println("The input - " + phoneNo + " is not a valid phone number. Please enter a 10 digit number.");
+			System.out.println("Assigning a default phone number.");
 		}
 		else
 		{
