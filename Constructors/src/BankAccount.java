@@ -11,7 +11,7 @@ public class BankAccount
 	 */
 	public BankAccount()
 	{
-//		This idea here is to create default values for the fields when the user calls the constructor.
+//		The idea here is to create default values for the fields when the user calls the constructor.
 //		It can be easily done by calling the custom constructor from within the default constructor.
 		this(666,400,"Default","default address","1000000000");
 		System.out.println("Empty constructor");
@@ -28,6 +28,7 @@ public class BankAccount
 	 */
 	public BankAccount(int accountNumber, double balance, String name, String email, String phoneNo)
 	{
+//		General rule of thumb is to not call the setters in the constructors
 		this._accountNumber = accountNumber;
 		this._balance = balance;
 		this._name = name;
@@ -35,6 +36,19 @@ public class BankAccount
 		this._phoneNo = phoneNo;
 	}
 	
+	/**
+	 * Custom constructor that will call another custom constructor.
+	 * This method will accept 3 fields and manually set the other two 
+	 * 
+	 * @param name
+	 * @param email
+	 * @param phoneNo
+	 */
+	public BankAccount(String name, String email, String phoneNo)
+	{
+		this(999, 100, name, email, phoneNo);
+	}
+
 	public void setAccountNnumber(int accountNumber)
 	{
 		this._accountNumber = accountNumber;

@@ -52,7 +52,15 @@ public class BAMain
 		System.out.println("Name: " + ba3.getName());
 		System.out.println("Email: " + ba3.getEmail());
 		System.out.println("Phone number: " + ba3.getPhoneNo());
-				
+		
+		System.out.println("\n******************\n");
+		BankAccount ba4 = new BankAccount("patch4", "alskdjf@laskdjf", "999999999");
+		System.out.println("Account number : " + ba4.getAccountNumber());
+		System.out.println("Balance: " + ba4.getBalance());
+		System.out.println("Name: " + ba4.getName());
+		System.out.println("Email: " + ba4.getEmail());
+		System.out.println("Phone number: " + ba4.getPhoneNo());
+		
 		
 	}
 
