@@ -15,6 +15,5 @@ public class InheritanceMain
 		f.eat();
 		f.move(5);
 		f.sleep("fish");
-		
 	}
 }
