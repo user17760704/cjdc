@@ -13,7 +13,12 @@ public class Main
 		System.out.println("What kind of a vehicle would you like to create: ");
 		choice = input.nextInt();
 		
-		
+		switch (choice)
+		{
+			case 1:
+				
+		}
+		 
 		
 		
 		

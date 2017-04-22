@@ -1,44 +1,41 @@
-import java.util.Scanner;
-
-public class GetDetails
+public class GetDetails 
 {
-	public static void getVehicleDetails(Vehicle v) throws Exception
+	public static void printVehicleDetails(Vehicle v)
 	{
-		Scanner input = new Scanner(System.in);
-		double price, fuelEfficiency;
-		String transmissionType = null, gtVersion;
-		boolean hasSunRoof = false,
-				isConvertible = false;
+//		Print details of base class
+		System.out.println("Name of the vehicle: " + v.getName());
+		System.out.println("Number of wheels: " + v.getWheels());
+		System.out.println("Top speed: " + v.getTopSpeed());
+		System.out.println("Price of the vehicle: " + v.getPrice());
+		System.out.println("Steering mode: " + v.getSteeringMode());
+		System.out.println("Color of the vehicle: " + v.getColor());
+		System.out.println("Year: " + v.getYear());
+		System.out.println("Fuel efficiency of the vehicle: " + v.getFuelEfficiency());
 		
-		System.out.println("Enter the price of the vehicle: ");
-		price = input.nextDouble();
-		System.out.println("Enter the fuel efficiency of the vehicle: ");
-		fuelEfficiency = input.nextDouble();
-		System.out.println("Enter transmission type: ");
-		transmissionType = input.next();
-		while (InputValidation.validTransmission(transmissionType) == false)
+//		Print details of the car
+		if (v instanceof Car)
 		{
-			System.out.println("Invalid transmission type. Please try again.");
-			System.out.println("Enter transmission type: ");
-			transmissionType = input.next();
+			printDetailsOfCar((Car) v);
 		}
 		
-		try
+//		Print details of FordMustang
+		if (v instanceof FordMustang)
 		{
-			System.out.println("Does the car have a sun roof (true/false): ");
-			hasSunRoof = input.nextBoolean();
-			System.out.println("Is this a convertible (true/false): ");
-			isConvertible = input.nextBoolean();
+			printDetailsOfFordMustang((FordMustang) v);
 		}
-		catch (Exception e)
-		{
-			System.out.println("Value should be \"true\" or \"false\". Please re-run the program.");
-			e.printStackTrace();
-			throw new Exception("Program failed!");
-		}
-		
-		System.out.println("Enter the GT version: ");
-		gtVersion = input.next();
-
+	}
+	
+	private static void printDetailsOfCar (Car c)
+	{
+		System.out.println("Number of doors: " + c.getDoors());
+		System.out.println("Power steering: " + c.getPowerSteering());
+		System.out.println("Transmission type: " + c.getTransmissionType());
+		System.out.println("Sun roof: " + c.getHasSunRoof());
+		System.out.println("Convertible: " + c.getIsConvertible());
+	}
+	
+	private static void printDetailsOfFordMustang(FordMustang fm)
+	{
+		System.out.println("GT version: " + fm.getGTVersion());
 	}
 }
