@@ -40,4 +40,21 @@ public class InputValidation
 		
 		return isValid;
 	}
+	
+	public static boolean validTransmission(String transmissionType)
+	{
+		boolean isValid = false;
+		
+		if ((transmissionType.equalsIgnoreCase("manual")) || transmissionType.equalsIgnoreCase("auto"))
+		{
+			isValid = true;
+		}
+		
+		else
+		{
+			isValid = false;
+		}
+		
+		return isValid;
+	}
 }
