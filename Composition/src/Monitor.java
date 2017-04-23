@@ -3,7 +3,7 @@ public class Monitor
 {
 	private String _model;
 	private String _manufacturer;
-	private int _size;
+	private double _size;
 //	Monitor isn't the resolution, but it has a resolution. This is an example of composition
 	private Resolution _resolution;
 	
@@ -16,7 +16,12 @@ public class Monitor
 		this._resolution = _resolution;
 	}
 	
-//	Public methods
+	public Monitor()
+	{
+		// TODO Auto-generated constructor stub
+	}
+
+	//	Public methods
 	public void drawPixel(int x, int y, String color)
 	{
 		System.out.println("Drawing pixel at: " + x + "," + y + " in color: " + color);
@@ -33,7 +38,7 @@ public class Monitor
 		return _manufacturer;
 	}
 
-	public int getSize()
+	public double getSize()
 	{
 		return _size;
 	}
@@ -55,7 +60,7 @@ public class Monitor
 		this._manufacturer = manufacturer;
 	}
 
-	public void setSize(int size)
+	public void setSize(double size)
 	{
 		this._size = size;
 	}
