@@ -4,19 +4,14 @@ public class Resolution
 	private int _width;
 	private int _height;
 	
-	public Resolution(int width, int height)
+	public Resolution(int _width, int _height)
 	{
 		super();
-		this._width = width;
-		this._height = height;
+		this._width = _width;
+		this._height = _height;
 	}
 
-	public Resolution()
-	{
-		// TODO Auto-generated constructor stub
-	}
-
-	//	All the getters
+//	All the getters
 	public int getWidth()
 	{
 		return _width;

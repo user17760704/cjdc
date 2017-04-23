@@ -1,4 +1,4 @@
-public class PrintDetails 
+public class GetDetails 
 {
 	public static void printVehicleDetails(Vehicle v)
 	{

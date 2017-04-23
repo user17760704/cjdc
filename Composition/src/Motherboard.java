@@ -6,22 +6,17 @@ public class Motherboard
 	private int _ramSlots;
 	private int _gpuSlots;
 	private boolean _supportsSLI;
-	private String _socketType;
+	private String _biosVersion;
 	
-	public Motherboard()
-	{
-		
-	}
-	
-	public Motherboard(String model, String manufacturer, int ramSlots, int gpuSlots, boolean supportsSLI, String socketType)
+	public Motherboard(String _model, String _manufacturer, int _ramSlots, int _gpuSlots, boolean _supportsSLI, String _biosVersion)
 	{
 		super();
-		this._model = model;
-		this._manufacturer = manufacturer;
-		this._ramSlots = ramSlots;
-		this._gpuSlots = gpuSlots;
-		this._supportsSLI = supportsSLI;
-		this._socketType = socketType;
+		this._model = _model;
+		this._manufacturer = _manufacturer;
+		this._ramSlots = _ramSlots;
+		this._gpuSlots = _gpuSlots;
+		this._supportsSLI = _supportsSLI;
+		this._biosVersion = _biosVersion;
 	}
 	
 //	Public methods
@@ -57,9 +52,9 @@ public class Motherboard
 		return _supportsSLI;
 	}
 	
-	public String getSocketType()
+	public String getBiosVersion()
 	{
-		return _socketType;
+		return _biosVersion;
 	}
 	
 //	All the setters
@@ -74,7 +69,7 @@ public class Motherboard
 		this._manufacturer = manufacturer;
 	}
 	
-	public void setRamSlots(int ramSlots)
+	public void set_ramSlots(int ramSlots)
 	{
 		this._ramSlots = ramSlots;
 	}
@@ -89,8 +84,8 @@ public class Motherboard
 		this._supportsSLI = supportsSLI;
 	}
 
-	public void setSocketType(String socketType)
+	public void setBiosVersion(String biosVersion)
 	{
-		this._socketType = socketType;
+		this._biosVersion = biosVersion;
 	}
 }

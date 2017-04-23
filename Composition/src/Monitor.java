@@ -1,27 +1,22 @@
 
-public class Monitor extends Resolution
+public class Monitor
 {
 	private String _model;
 	private String _manufacturer;
-	private double _size;
+	private int _size;
 //	Monitor isn't the resolution, but it has a resolution. This is an example of composition
 	private Resolution _resolution;
 	
-	public Monitor(String model, String manufacturer, int size, Resolution resolution)
+	public Monitor(String _model, String _manufacturer, int _size, Resolution _resolution)
 	{
 		super();
-		this._model = model;
-		this._manufacturer = manufacturer;
-		this._size = size;
-		this._resolution = resolution;
+		this._model = _model;
+		this._manufacturer = _manufacturer;
+		this._size = _size;
+		this._resolution = _resolution;
 	}
 	
-	public Monitor()
-	{
-		// TODO Auto-generated constructor stub
-	}
-
-	//	Public methods
+//	Public methods
 	public void drawPixel(int x, int y, String color)
 	{
 		System.out.println("Drawing pixel at: " + x + "," + y + " in color: " + color);
@@ -38,7 +33,7 @@ public class Monitor extends Resolution
 		return _manufacturer;
 	}
 
-	public double getSize()
+	public int getSize()
 	{
 		return _size;
 	}
@@ -60,7 +55,7 @@ public class Monitor extends Resolution
 		this._manufacturer = manufacturer;
 	}
 
-	public void setSize(double size)
+	public void setSize(int size)
 	{
 		this._size = size;
 	}
