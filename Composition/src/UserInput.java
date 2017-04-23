@@ -62,6 +62,8 @@ public class UserInput
 		
 		System.out.println("Enter case model: ");
 		tower.setModel(input.next());
+		System.out.println("Enter the manufacturer: ");
+		tower.setManufacturer(input.next());
 		System.out.println("Enter form factor: ");
 		tower.setFormFactor(input.next());
 		System.out.println("Enter style: ");

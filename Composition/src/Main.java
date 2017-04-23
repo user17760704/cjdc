@@ -6,12 +6,7 @@ public class Main
 	public static void main(String[] args)
 	{
 		Scanner input = new Scanner(System.in);
-//		Motherboard mb = new Motherboard();
-//		
-//		System.out.println("Build your own PC");
-//		mb = UserInput.setMotherboardDetails();
-//		PrintPCDetails.printMotherboardDetails(mb);
-		
+
 		int choice;
 		
 		System.out.println("Enter the option: ");
@@ -31,5 +26,7 @@ public class Main
 				System.out.println("Invalid option.");
 				break;
 		}
+		
+		input.close();
 	}
 }
