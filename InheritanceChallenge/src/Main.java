@@ -17,15 +17,15 @@ public class Main
 		{
 			case 1:
 				Vehicle v = SetDetails.setVehicleDetails();
-				GetDetails.printVehicleDetails(v);
+				PrintDetails.printVehicleDetails(v);
 				break;
 			case 2:
 				Car c = SetDetails.setCarDetails();
-				GetDetails.printVehicleDetails(c);
+				PrintDetails.printVehicleDetails(c);
 				break;
 			case 3:
 				Mustang m = SetDetails.setMustangDetails();
-				GetDetails.printVehicleDetails(m);
+				PrintDetails.printVehicleDetails(m);
 				break;
 			default:
 				System.out.println("Run again.");
