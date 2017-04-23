@@ -4,16 +4,20 @@ public class Car extends Vehicle
 	private boolean _powerSteering;
 //	Manual or automatic
 	private String _transmissionType;
-	private boolean _hasSunRoof;
 	private int _doors;
 	private boolean _isConvertible;
+	final static int _wheels = 4;
 	
-	public Car(String name, int topSpeed, double price, String steeringMode, String color, int year, double fuelEfficiency, boolean powerSteering, String transmissionType, boolean hasSunRoof, int doors, boolean isConvertible)
+	public Car()
 	{
-		super(name, 4, topSpeed, price, "Wheel", color, year, fuelEfficiency);
+		super();
+	}
+	
+	public Car(String name, double topSpeed, double price, String color, int year, double fuelEfficiency, boolean powerSteering, String transmissionType, int doors, boolean isConvertible)
+	{
+		super(name, _wheels, topSpeed, price, color, year, fuelEfficiency);
 		this._powerSteering = powerSteering;
 		this._transmissionType = transmissionType;
-		this._hasSunRoof = hasSunRoof;
 		this._doors = doors;
 		this._isConvertible = isConvertible;
 	}
@@ -27,10 +31,6 @@ public class Car extends Vehicle
 	{
 		return _transmissionType;
 	}
-	public boolean getHasSunRoof()
-	{
-		return _hasSunRoof;
-	}
 	public int getDoors()
 	{
 		return _doors;
@@ -38,6 +38,10 @@ public class Car extends Vehicle
 	public boolean getIsConvertible()
 	{
 		return _isConvertible;
+	}
+	public static int getCarWheels()
+	{
+		return _wheels;
 	}
 	
 //	All the setters
@@ -48,10 +52,6 @@ public class Car extends Vehicle
 	public void setTransmissionType(String transmissionType)
 	{
 		this._transmissionType = transmissionType;
-	}
-	public void setHasSunRoof(boolean hasSunRoof)
-	{
-		this._hasSunRoof = hasSunRoof;
 	}
 	public void setDoors(int doors)
 	{

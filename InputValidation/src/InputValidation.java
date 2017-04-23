@@ -45,7 +45,7 @@ public class InputValidation
 	{
 		boolean isValid = false;
 		
-		if ((transmissionType.equalsIgnoreCase("manual")) || transmissionType.equalsIgnoreCase("auto"))
+		if ((transmissionType.equalsIgnoreCase("manual")) || transmissionType.equalsIgnoreCase("auto") || transmissionType.equalsIgnoreCase("m") || transmissionType.equalsIgnoreCase("a"))
 		{
 			isValid = true;
 		}

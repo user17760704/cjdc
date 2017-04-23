@@ -3,26 +3,27 @@ public class Vehicle
 {
 	private String _name;
 	private int _wheels;
-	private int _topSpeed;
+	private double _topSpeed;
 	private double _price;
-	private String _steeringMode;
 	private String _color;
 	private int _year;
 	private double _fuelEfficiency;
 	
+	public Vehicle()
+	{
+		super();
+	}
 	
-	
-	public Vehicle(String name, int _wheels, int _topSpeed, double _price, String _steeringMode, String _color, int _year, double _fuelEfficiency)
+	public Vehicle(String name, int wheels, double topSpeed, double price, String color, int year, double fuelEfficiency)
 	{
 		super();
 		this._name = name;
-		this._wheels = _wheels;
-		this._topSpeed = _topSpeed;
-		this._price = _price;
-		this._steeringMode = _steeringMode;
-		this._color = _color;
-		this._year = _year;
-		this._fuelEfficiency = _fuelEfficiency;
+		this._wheels = wheels;
+		this._topSpeed = topSpeed;
+		this._price = price;
+		this._color = color;
+		this._year = year;
+		this._fuelEfficiency = fuelEfficiency;
 	}
 
 //	All the getters
@@ -34,17 +35,13 @@ public class Vehicle
 	{
 		return _wheels;
 	}
-	public int getTopSpeed()
+	public double getTopSpeed()
 	{
 		return _topSpeed;
 	}
 	public double getPrice()
 	{
 		return _price;
-	}
-	public String getSteeringMode()
-	{
-		return _steeringMode;
 	}
 	public String getColor()
 	{
@@ -68,17 +65,13 @@ public class Vehicle
 	{
 		this._wheels = wheels;
 	}
-	public void setTopSpeed(int topSpeed)
+	public void setTopSpeed(double d)
 	{
-		this._topSpeed = topSpeed;
+		this._topSpeed = d;
 	}
 	public void setPrice(double price)
 	{
 		this._price = price;
-	}
-	public void setSteeringMode(String steeringMode)
-	{
-		this._steeringMode = steeringMode;
 	}
 	public void setColor(String color)
 	{
