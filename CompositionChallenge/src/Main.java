@@ -10,6 +10,6 @@ public class Main
 		Room room = new Room("Computer room", "Off white", 1, furniture, dimensions);
 		
 		room.addFurniture();
+		room.changeDimensions(dimensions);
 	}
-
 }

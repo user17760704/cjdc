@@ -18,9 +18,9 @@ public class Room
 	}
 	
 //	Public methods
-	public Dimensions changeDimensions()
+	public Dimensions changeDimensions(Dimensions dimensions)
 	{
-		_dimensions.changeDimensions();
+		_dimensions.changeDimensions(dimensions);
 		return this._dimensions;
 	}
 	

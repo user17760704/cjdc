@@ -14,25 +14,28 @@ public class Dimensions
 	}
 
 	
-	public void changeDimensions()
+	public Dimensions changeDimensions(Dimensions dimensions)
 	{
+		System.out.println("Old dimensions, length: " + dimensions.getLength() + ", width: " + dimensions.getWidth() + ", height: " + dimensions.getHeight());
 		_length +=5;
 		_width +=6;
 		_height +=7;
+		System.out.println("New dimensions, length: " + dimensions.getLength() + ", width: " + dimensions.getWidth() + ", height: " + dimensions.getHeight());
+		return dimensions;
 	}
 
 //	All the getters
-	public double getLength()
+	private double getLength()
 	{
 		return _length;
 	}
 	
-	public double getWidth()
+	private double getWidth()
 	{
 		return _width;
 	}
 
-	public double getHeight()
+	private double getHeight()
 	{
 		return _height;
 	}

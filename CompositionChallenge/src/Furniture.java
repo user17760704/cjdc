@@ -44,7 +44,7 @@ public class Furniture
 		return _tables;
 	}
 	
-	public int getTotal()
+	private int getTotal()
 	{
 		_total = _chairs + _tables + _beds;
 		return _total;
