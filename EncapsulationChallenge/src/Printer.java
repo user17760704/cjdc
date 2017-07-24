@@ -71,8 +71,39 @@ public class Printer
 		}
 	}
 	
-	public void printPage(int pagesToPrint)
+//	If the printer is duplex capable, then the number of pages to print 
+//	will be half of what is needed if number of pages is even, else it will
+//	be half of the number of pages plus 1
+	public int printPage(int pagesToPrint)
 	{
-		this._numberOfPagesPrinted = this._numberOfPagesPrinted + pagesToPrint;
+		int pagesPrinted = 0;
+		if (_duplexCapable == false)
+		{
+			pagesPrinted = pagesToPrint;
+			this._numberOfPagesPrinted += pagesPrinted;
+		}
+		else
+		{
+			pagesPrinted = roundUp(pagesToPrint, 2);
+			this._numberOfPagesPrinted += pagesPrinted;
+		}
+		
+		return pagesPrinted;
+	}
+	
+	public int roundUp(int number, int divideBy)
+	{
+		int roundUpNumber = 0;
+		
+		if (number % divideBy== 0)
+		{
+			roundUpNumber = number / divideBy;  
+		}
+		else
+		{
+			roundUpNumber = number/divideBy + 1;
+		}
+
+		return roundUpNumber;
 	}
 }
