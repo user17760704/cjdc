@@ -1,6 +1,8 @@
 
 public class Player
 {
+//	It is not practice to make member variables public. This is done
+//	to demonstrate good and bad practices.
 	public String _name;
 	public int _health;
 	public String _weapon;

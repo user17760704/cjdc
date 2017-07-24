@@ -9,9 +9,15 @@ public class EnhancedPlayer
 	{
 		super();
 		this._name = name;
-		if (health > 0 && _health <= 100)
+		if (health > 0 && health <= 100)
 		{
 			this._health = health; 
+		}
+		
+//		This is not strictly needed because we are already initializing the member variable
+		else if (health > 100)
+		{
+			this._health = 100;
 		}
 		
 		this._weapon = weapon;

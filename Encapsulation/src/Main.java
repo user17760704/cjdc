@@ -18,6 +18,12 @@ public class Main
 		player._health = 200;
 		player.loseHealth(damage);
 		System.out.println("Remaining health = " + player.healthRemaining()); 
+		
+		EnhancedPlayer ep = new EnhancedPlayer("abc", 101, "pistol");
+		
+		System.out.println("Name: " + ep.getName());
+		System.out.println("Health: " + ep.getHealth());
+		
 	}
 
 }
