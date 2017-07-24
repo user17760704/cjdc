@@ -10,12 +10,15 @@ public class Main
 		
 		System.out.println("Name: " + car1.getName());
 		car1.pushBreak();
+		car1.accelerate();
 		
-		System.out.println("Name: " + car2.getName());
+		System.out.println("\nName: " + car2.getName());
 		car2.pushBreak();
+		car2.accelerate();
 		
-		System.out.println("Name: " + car3.getName());
+		System.out.println("\nName: " + car3.getName());
 		car3.pushBreak();
+		car3.accelerate();
 	}
 
 }
