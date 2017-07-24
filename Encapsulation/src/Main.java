@@ -15,6 +15,7 @@ public class Main
 		System.out.println("Remaining health = " + player.healthRemaining());
 		
 		damage = 11;
+		player._health = 200;
 		player.loseHealth(damage);
 		System.out.println("Remaining health = " + player.healthRemaining());
 	}
